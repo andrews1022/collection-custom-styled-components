@@ -3,6 +3,7 @@ import styled from 'styled-components';
 interface ButtonsProps {
 	mode: string;
 	isPrimary: boolean;
+	children: React.ReactNode;
 }
 
 const handleButtonMode = (mode: string) => {
@@ -47,10 +48,10 @@ const ButtonStyles = styled.button<{ mode: string; isPrimary: boolean }>`
 	}
 `;
 
-const Button = ({ mode, isPrimary }: ButtonsProps) => {
+const Button = ({ mode, isPrimary, children }: ButtonsProps) => {
 	return (
 		<ButtonStyles mode={mode} isPrimary={isPrimary}>
-			Click Me!
+			{children}
 		</ButtonStyles>
 	);
 };

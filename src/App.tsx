@@ -1,15 +1,10 @@
-// packages
-import styled from 'styled-components';
-
 // styled components
-import Heading from './components/Heading';
-import Button from './components/Button';
-import Gap from './util/Gap';
+import Heading from './components/Heading/Heading';
+import Button from './components/Button/Button';
+import Copy from './components/Copy/Copy';
 
-const Para = styled.p`
-	color: ${(props) => props.theme.fontColor};
-	font-size: 1.125rem;
-`;
+// util
+import Gap from './util/Gap';
 
 const App = () => {
 	return (
@@ -25,12 +20,17 @@ const App = () => {
 			<Gap />
 
 			{/* Button.tsx */}
-			<Button mode='solid' isPrimary={true} />
-			<Button mode='hollow' isPrimary={false} />
+			<Button mode='solid' isPrimary={true}>
+				Click Me!
+			</Button>
+			<Button mode='hollow' isPrimary={false}>
+				Click Me!
+			</Button>
 
 			<Gap />
 
-			<Para>Lorem ipsum dolor sit amet.</Para>
+			{/* Copy.tsx */}
+			<Copy>Lorem ipsum dolor sit amet.</Copy>
 		</div>
 	);
 };

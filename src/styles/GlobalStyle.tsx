@@ -1,7 +1,7 @@
 // a set of global styles/resets
 
 import { createGlobalStyle } from 'styled-components';
-import mediaQueries from './mediaQueriez';
+import mediaQueries from './mediaQueries';
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
     display: block;
     height: auto;
     max-width: 100%;
+  }
+
+  p {
+    font-size: 1.125rem;
   }
 
   a {
