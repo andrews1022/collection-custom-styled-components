@@ -1,5 +1,5 @@
 import Heading from './components/Heading';
-import Buttons from './components/Buttons';
+import Button from './components/Button';
 import Gap from './Gap';
 
 const App = () => {
@@ -15,9 +15,9 @@ const App = () => {
 
 			<Gap />
 
-			{/* Buttons.tsx */}
-			<Buttons mode='solid' isPrimary={true} />
-			<Buttons mode='hollow' isPrimary={false} />
+			{/* Button.tsx */}
+			<Button mode='solid' isPrimary={true} />
+			<Button mode='hollow' isPrimary={false} />
 		</div>
 	);
 };

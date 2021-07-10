@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 interface ButtonsProps {
@@ -48,14 +47,12 @@ const ButtonStyles = styled.button<{ mode: string; isPrimary: boolean }>`
 	}
 `;
 
-const Buttons = ({ mode, isPrimary }: ButtonsProps) => {
+const Button = ({ mode, isPrimary }: ButtonsProps) => {
 	return (
-		<>
-			<ButtonStyles mode={mode} isPrimary={isPrimary}>
-				Click Me!
-			</ButtonStyles>
-		</>
+		<ButtonStyles mode={mode} isPrimary={isPrimary}>
+			Click Me!
+		</ButtonStyles>
 	);
 };
 
-export default Buttons;
+export default Button;
