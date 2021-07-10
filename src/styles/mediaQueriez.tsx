@@ -1,4 +1,4 @@
-const MediaQueries = {
+const mediaQueries = {
 	desktop4k: 'only screen and (min-width: 3840px)',
 	desktop1440p: 'only screen and (max-width: 2560px)',
 	desktopHD: 'only screen and (max-width: 1920px)',
@@ -17,4 +17,4 @@ const MediaQueries = {
 	mobileTiny: 'only screen and (max-width: 325px)'
 };
 
-export default MediaQueries;
+export default mediaQueries;

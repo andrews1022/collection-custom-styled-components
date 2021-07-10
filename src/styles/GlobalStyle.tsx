@@ -1,18 +1,18 @@
 // a set of global styles/resets
 
 import { createGlobalStyle } from 'styled-components';
-import MediaQueries from './MediaQueries';
+import mediaQueries from './mediaQueriez';
 
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 100%;
 
-    @media ${MediaQueries.desktopSmall} {
+    @media ${mediaQueries.desktopSmall} {
 		  font-size: 87.5%;
     }
 
-    @media ${MediaQueries.tabletLandscape} {
+    @media ${mediaQueries.tabletLandscape} {
       font-size: 75%;
     }
   }
