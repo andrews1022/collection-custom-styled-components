@@ -16,7 +16,6 @@ interface HeadingProps {
 
 const HeadingStyles = styled.div<{ color: string; size: number; weight: number }>`
 	color: ${(props) => props.color};
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: ${(props) => `${props.size / 16}rem`};
 	font-weight: ${(props) => props.weight};
 `;
