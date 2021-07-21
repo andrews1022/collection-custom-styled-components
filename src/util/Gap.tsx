@@ -1,3 +1,3 @@
-const Gap = () => <hr style={{ margin: '1rem 0' }} />;
+const Gap = () => <hr style={{ margin: '2rem 0' }} />;
 
 export default Gap;

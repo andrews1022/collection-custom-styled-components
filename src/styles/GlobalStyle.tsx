@@ -1,24 +1,24 @@
 // a set of global styles/resets
 
 import { createGlobalStyle } from 'styled-components';
-import mediaQueries from './mediaQueries';
+import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     font-size: 100%;
 
-    @media ${mediaQueries.desktopSmall} {
+    @media ${theme.mediaQueries.desktopSmall} {
 		  font-size: 87.5%;
     }
 
-    @media ${mediaQueries.tabletLandscape} {
+    @media ${theme.mediaQueries.tabletLandscape} {
       font-size: 75%;
     }
   }
 
   body {
-	  font-family: Arial, Helvetica, sans-serif;
+	  font-family: ${theme.fonts.montserrat};
     line-height: 1;
     margin: 1rem;
   }
@@ -31,6 +31,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: inherit;
     margin: 0;
     padding: 0;
+  }
+
+  button, 
+  input, 
+  textarea {
+    font-family: ${theme.fonts.montserrat};
   }
 
   img,
