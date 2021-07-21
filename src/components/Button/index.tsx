@@ -1,7 +1,5 @@
-import { Children } from '../../types/types';
+import { ButtonMode, Children } from '../../types/types';
 import ButtonStyles from './styles';
-
-type ButtonMode = 'primary' | 'secondary';
 
 interface ButtonsProps {
 	mode: ButtonMode;

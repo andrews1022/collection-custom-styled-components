@@ -85,6 +85,31 @@ const App = () => {
 						<h2>Hello!</h2>
 					</div>
 				</GridColumn>
+
+				{/* 1/4 columns */}
+				<GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 3 } }}>
+					<div style={{ backgroundColor: colors.scandal }}>
+						<h2>Hello!</h2>
+					</div>
+				</GridColumn>
+
+				<GridColumn layout={{ columns: { startingColumn: 4, numberOfColumnsToSpan: 3 } }}>
+					<div style={{ backgroundColor: colors.scandal }}>
+						<h2>Hello!</h2>
+					</div>
+				</GridColumn>
+
+				<GridColumn layout={{ columns: { startingColumn: 7, numberOfColumnsToSpan: 3 } }}>
+					<div style={{ backgroundColor: colors.scandal }}>
+						<h2>Hello!</h2>
+					</div>
+				</GridColumn>
+
+				<GridColumn layout={{ columns: { startingColumn: 10, numberOfColumnsToSpan: 3 } }}>
+					<div style={{ backgroundColor: colors.scandal }}>
+						<h2>Hello!</h2>
+					</div>
+				</GridColumn>
 			</Grid>
 
 			<Gap />

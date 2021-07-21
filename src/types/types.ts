@@ -14,3 +14,7 @@ export type JustifyFlexItems =
 export type AlignGridItems = 'baseline' | 'center' | 'end' | 'start' | 'stretch';
 
 export type Children = React.ReactNode;
+
+export type ButtonMode = 'primary' | 'secondary';
+
+export type HeadingType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';

@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-
-type ButtonMode = 'primary' | 'secondary';
+import { ButtonMode } from '../../types/types';
 
 interface ButtonStylesProps {
 	mode: ButtonMode;
