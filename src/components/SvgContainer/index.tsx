@@ -1,4 +1,3 @@
-import React from 'react';
 import SvgContainerStyles from './styles';
 import { Children } from '../../types/types';
 

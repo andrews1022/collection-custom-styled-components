@@ -1,4 +1,3 @@
-import React from 'react';
 import { Children } from '../../types/types';
 import ButtonStyles from './styles';
 

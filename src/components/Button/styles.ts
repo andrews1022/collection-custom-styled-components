@@ -19,7 +19,7 @@ const ButtonStyles = styled.button<ButtonStylesProps>`
 	transition: all 200ms ease-in-out;
 
 	&:hover {
-		box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0.625rem 0.75rem 0 rgba(0, 0, 0, 0.1);
 		transform: translateY(-0.25rem);
 	}
 `;

@@ -15,7 +15,7 @@ import Flex from './components/Flex';
 import theme from './styles/theme';
 
 // util
-import Gap from './util/Gap';
+import Gap from './utils/Gap';
 
 const App = () => {
 	const { colors } = theme;
@@ -41,7 +41,7 @@ const App = () => {
 			<Gap />
 
 			{/* Copy.tsx */}
-			<Copy color={colors.eastBay}>Lorem ipsum dolor sit amet.</Copy>
+			<Copy color={colors.eastBay}>This is some text inside the Copy component!</Copy>
 
 			<Gap />
 

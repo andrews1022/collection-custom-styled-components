@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import convertPxToRem from '../../util/convertPxToRem';
+import convertPxToRem from '../../utils/convertPxToRem';
 
 interface HeadingStylesProps {
 	color: string;
