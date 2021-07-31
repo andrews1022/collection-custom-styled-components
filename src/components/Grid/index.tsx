@@ -1,5 +1,4 @@
-import React from 'react';
-import GridLayout from './styles';
+import styled from 'styled-components';
 import { AlignGridItems, Children } from '../../types/types';
 
 interface GridProps {
@@ -7,8 +6,16 @@ interface GridProps {
 	children: Children;
 }
 
-const Grid = ({ children, alignItems = 'center' }: GridProps) => (
-	<GridLayout alignItems={alignItems}>{children}</GridLayout>
-);
+const Grid = styled.div<GridProps>`
+	display: grid;
+	align-items: ${({ alignItems }) => alignItems || 'center'};
+	grid-gap: 1.5rem;
+	grid-template-columns: repeat(12, 1fr);
+	padding: 0 4.5rem;
+
+	@media ${({ theme }) => theme.mediaQueries.tabletMedium} {
+		padding: 0 1.5rem;
+	}
+`;
 
 export default Grid;

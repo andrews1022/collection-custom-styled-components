@@ -39,7 +39,7 @@ const ProgressRing = ({ radius, stroke }: ProgressRingProps) => {
 					cy={radius}
 				/>
 				<AnimatedCircle
-					stroke={colors.creamBrulee}
+					stroke={colors.eastBay}
 					fill='transparent'
 					strokeWidth={stroke}
 					strokeDasharray={`${circumference} ${circumference}`}

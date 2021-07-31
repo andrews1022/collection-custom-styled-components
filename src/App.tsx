@@ -3,6 +3,7 @@ import Heading from './components/Heading';
 import Button from './components/Button';
 import Copy from './components/Copy';
 import ProgressRing from './components/ProgressRing';
+import Accordion from './components/Accordion';
 
 // grid
 import Grid from './components/Grid';
@@ -41,7 +42,10 @@ const App = () => {
 			<Gap />
 
 			{/* Copy.tsx */}
-			<Copy color={colors.eastBay}>This is some text inside the Copy component!</Copy>
+			<Copy color={colors.eastBay}>
+				This is some text inside the Copy component! Lorem ipsum dolor sit amet consectetur
+				adipisicing elit. Excepturi, eligendi!
+			</Copy>
 
 			<Gap />
 
@@ -133,6 +137,11 @@ const App = () => {
 
 			{/* ProgressRing.tsx */}
 			<ProgressRing radius={68} stroke={6} />
+
+			<Gap />
+
+			{/* Accordion.tsx */}
+			<Accordion />
 		</div>
 	);
 };

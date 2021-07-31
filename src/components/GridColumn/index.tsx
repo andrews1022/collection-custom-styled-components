@@ -1,6 +1,4 @@
-import React from 'react';
-import GridColumnStyles from './styles';
-import { Children } from '../../types/types';
+import styled from 'styled-components';
 
 // when consuming props for this component, use a 'layout' object containing either:
 
@@ -9,6 +7,8 @@ import { Children } from '../../types/types';
 
 // b) a columns object which specifies the starting column number and the number of columns to span:
 // ex: layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 5 } }}
+
+// as well as an optional 'breakpoint' prop to specify when the columns should stack on mobile
 
 interface GridColumnPropsA {
 	isFullWidth: boolean;
@@ -22,12 +22,19 @@ interface GridColumnPropsB {
 }
 
 interface GridColumnProps {
+	breakpoint?: string;
 	layout: GridColumnPropsA | GridColumnPropsB;
-	children: Children;
 }
 
-const GridColumn = ({ layout, children }: GridColumnProps) => (
-	<GridColumnStyles layout={layout}>{children}</GridColumnStyles>
-);
+const GridColumn = styled.div<GridColumnProps>`
+	${({ layout }) =>
+		'isFullWidth' in layout
+			? 'grid-column: 1 / -1;'
+			: `grid-column: ${layout.columns.startingColumn} / span ${layout.columns.numberOfColumnsToSpan};`}
+
+	@media ${({ breakpoint, theme }) => breakpoint || theme.mediaQueries.tabletMedium} {
+		grid-column: 1 / -1;
+	}
+`;
 
 export default GridColumn;

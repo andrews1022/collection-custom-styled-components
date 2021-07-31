@@ -37,6 +37,7 @@
 		"react/jsx-indent": [2, "tab"],
 		"react/jsx-indent-props": [2, "tab"],
 		"react/jsx-one-expression-per-line": "off",
+		"react/no-unused-prop-types": "warn",
 		"react/prop-types": [0],
 		"react/react-in-jsx-scope": "off",
 		"react/require-default-props": "off",
