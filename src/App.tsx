@@ -17,6 +17,7 @@ import theme from './styles/theme';
 
 // util
 import Gap from './utils/Gap';
+import FilterSingle from './components/FilterSingle';
 
 const App = () => {
 	const { colors } = theme;
@@ -25,23 +26,23 @@ const App = () => {
 		<div className='app'>
 			<Gap />
 
-			{/* Heading.tsx */}
-			<Heading color={colors.scandal} fontSizeInPx={64} element='h1'>
+			{/* headings */}
+			<Heading color={colors.scandal} element='h1' fontSizeInPx={64}>
 				Hello World!
 			</Heading>
-			<Heading color={colors.eastBay} fontSizeInPx={32} element='h2'>
+			<Heading color={colors.eastBay} element='h2' fontSizeInPx={32}>
 				Hello Again!
 			</Heading>
 
 			<Gap />
 
-			{/* Button.tsx */}
+			{/* button */}
 			<Button mode='primary'>Click Me!</Button>
 			<Button mode='secondary'>Click Me!</Button>
 
 			<Gap />
 
-			{/* Copy.tsx */}
+			{/* copy */}
 			<Copy color={colors.eastBay}>
 				This is some text inside the Copy component! Lorem ipsum dolor sit amet consectetur
 				adipisicing elit. Excepturi, eligendi!
@@ -49,99 +50,104 @@ const App = () => {
 
 			<Gap />
 
-			{/* Grid.tsx + GridColumn.tsx */}
+			{/* grid + grid column */}
 			<Grid>
 				{/* full width */}
 				<GridColumn layout={{ isFullWidth: true }}>
 					<div style={{ backgroundColor: colors.creamBrulee }}>
-						<h2>Hello!</h2>
+						<h2>I am a full width grid item!</h2>
 					</div>
 				</GridColumn>
 
 				{/* 1/3 columns */}
 				<GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 4 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/3 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				<GridColumn layout={{ columns: { startingColumn: 5, numberOfColumnsToSpan: 4 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/3 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				<GridColumn layout={{ columns: { startingColumn: 9, numberOfColumnsToSpan: 4 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/3 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				{/* 1/2 columns */}
 				<GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 6 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/2 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				<GridColumn layout={{ columns: { startingColumn: 7, numberOfColumnsToSpan: 6 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/2 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				{/* 1/4 columns */}
 				<GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 3 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/4 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				<GridColumn layout={{ columns: { startingColumn: 4, numberOfColumnsToSpan: 3 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/4 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				<GridColumn layout={{ columns: { startingColumn: 7, numberOfColumnsToSpan: 3 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/4 grid item!</h2>
 					</div>
 				</GridColumn>
 
 				<GridColumn layout={{ columns: { startingColumn: 10, numberOfColumnsToSpan: 3 } }}>
 					<div style={{ backgroundColor: colors.scandal }}>
-						<h2>Hello!</h2>
+						<h2>I am a 1/4 grid item!</h2>
 					</div>
 				</GridColumn>
 			</Grid>
 
 			<Gap />
 
-			{/* Flex.tsx */}
+			{/* flex */}
 			<Flex justifyContent='space-evenly'>
 				<div style={{ backgroundColor: colors.scandal }}>
-					<h2>Hello!</h2>
+					<h2>I am a flexed item!</h2>
 				</div>
 
 				<div style={{ backgroundColor: colors.scandal, height: '2rem' }}>
-					<h2>Hello!</h2>
+					<h2>I am a flexed item!</h2>
 				</div>
 
 				<div style={{ backgroundColor: colors.scandal }}>
-					<h2>Hello!</h2>
+					<h2>I am a flexed item!</h2>
 				</div>
 			</Flex>
 
 			<Gap />
 
-			{/* ProgressRing.tsx */}
-			<ProgressRing radius={68} stroke={6} />
+			{/* progress ring */}
+			<ProgressRing radius={68} slideDuration={3000} stroke={6} />
 
 			<Gap />
 
-			{/* Accordion.tsx */}
+			{/* accordion */}
 			<Accordion />
+
+			<Gap />
+
+			{/* single filtering */}
+			<FilterSingle />
 		</div>
 	);
 };

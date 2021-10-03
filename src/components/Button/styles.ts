@@ -15,11 +15,10 @@ const ButtonStyles = styled.button<ButtonStylesProps>`
 	cursor: pointer;
 	margin: 0 1rem;
 	padding: 0.625rem 1.75rem;
-	transition: all 200ms ease-in-out;
+	transition: box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
 
 	&:hover {
 		box-shadow: 0 0.625rem 0.75rem 0 rgba(0, 0, 0, 0.1);
-		transform: translateY(-0.25rem);
 	}
 `;
 

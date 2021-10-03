@@ -1,53 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import theme from '../../styles/theme';
-import { ProgressRingWrapper, ProgressRingStyles, AnimatedCircle } from './styles';
+import React from 'react';
 
+// styles and styled components
+import { AnimatedCircle, BaseCircle, ProgressRingStyles, ProgressRingWrapper } from './styles';
+
+// props
 interface ProgressRingProps {
 	radius: number;
+	slideDuration: number;
 	stroke: number;
 }
 
-const ProgressRing = ({ radius, stroke }: ProgressRingProps) => {
-	const [progress, setProgress] = useState(0);
-
+const ProgressRing = ({ radius, slideDuration, stroke }: ProgressRingProps) => {
 	const normalizedRadius = radius - stroke * 2;
-	const circumference = normalizedRadius * 2 * Math.PI;
-	const strokeDashoffset = circumference - (progress / 100) * circumference;
 
-	const updateProgress = () => {
-		setTimeout(() => {
-			setProgress(progress + 5);
-		}, 200);
+	const progressRingDimensions = {
+		height: (radius * 2) / 16,
+		width: (radius * 2) / 16
 	};
 
-	useEffect(() => {
-		if (progress < 100) updateProgress();
-	}, [progress]);
-
-	const { colors, greys } = theme;
+	const VIEW_BOX_DIMENSIONS = '0 0 50 50';
+	const CX_CY_VALUE = '50%';
 
 	return (
 		<ProgressRingWrapper>
-			<ProgressRingStyles height={radius * 2} width={radius * 2}>
-				<circle
-					stroke={greys.whiteSmoke}
-					fill='transparent'
-					strokeWidth={stroke}
-					style={{ strokeDashoffset }}
-					r={normalizedRadius}
-					cx={radius}
-					cy={radius}
-				/>
+			<ProgressRingStyles dimensions={progressRingDimensions} viewBox={VIEW_BOX_DIMENSIONS}>
+				<BaseCircle cx={CX_CY_VALUE} cy={CX_CY_VALUE} r={normalizedRadius / 2.5} />
 				<AnimatedCircle
-					stroke={colors.eastBay}
-					fill='transparent'
-					strokeWidth={stroke}
-					strokeDasharray={`${circumference} ${circumference}`}
-					style={{ strokeDashoffset }}
-					r={normalizedRadius}
-					cx={radius}
-					cy={radius}
-					id='circle-to-animate'
+					cx={CX_CY_VALUE}
+					cy={CX_CY_VALUE}
+					r={normalizedRadius / 2.5}
+					slideDuration={slideDuration}
 				/>
 			</ProgressRingStyles>
 		</ProgressRingWrapper>

@@ -1,18 +1,49 @@
 import styled from 'styled-components';
 
+// interfaces
+interface ProgressRingStylesProps {
+	dimensions: {
+		height: number;
+		width: number;
+	};
+}
+
+interface AnimatedCircleProps {
+	slideDuration: number;
+}
+
 export const ProgressRingWrapper = styled.div`
-	position: relative;
+	transition: opacity 150ms ease-in-out;
 `;
 
-export const ProgressRingStyles = styled.svg`
+export const ProgressRingStyles = styled.svg<ProgressRingStylesProps>`
 	position: relative;
-`;
-
-export const AnimatedCircle = styled.circle`
-	position: absolute;
-	top: 0;
-	left: 0;
+	height: ${({ dimensions }) => `${dimensions.height}rem`};
+	width: ${({ dimensions }) => `${dimensions.width}rem`};
 	transform: rotate(-90deg);
-	transform-origin: 50% 50%;
-	transition: stroke-dashoffset 500ms;
+`;
+
+export const BaseCircle = styled.circle`
+	fill: transparent;
+	stroke: ${({ theme }) => theme.greys.whiteSmoke};
+	stroke-width: 0.125rem;
+`;
+
+export const AnimatedCircle = styled.circle<AnimatedCircleProps>`
+	@keyframes fill-progress-ring {
+		to {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	animation-name: fill-progress-ring;
+	animation-duration: ${({ slideDuration }) => `${slideDuration}ms`};
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	fill: transparent;
+	stroke: ${({ theme }) => theme.colors.eastBay};
+	stroke-dasharray: 152;
+	stroke-dashoffset: 152;
+	stroke-width: 0.125rem;
 `;
