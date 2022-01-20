@@ -1,9 +1,10 @@
 // components
-import Heading from './components/Heading';
+import Accordion from './components/Accordion';
 import Button from './components/Button';
 import Copy from './components/Copy';
+import Heading from './components/Heading';
 import ProgressRing from './components/ProgressRing';
-import Accordion from './components/Accordion';
+import ScreenReaderText from './components/ScreenReaderText';
 
 // grid
 import Grid from './components/Grid';
@@ -28,10 +29,22 @@ const App = () => {
 
 			{/* headings */}
 			<Heading color={colors.scandal} element='h1' fontSizeInPx={64}>
-				Hello World!
+				I&apos;m an h1!
 			</Heading>
-			<Heading color={colors.eastBay} element='h2' fontSizeInPx={32}>
-				Hello Again!
+			<Heading color={colors.eastBay} element='h2' fontSizeInPx={56}>
+				I&apos;m an h2!
+			</Heading>
+			<Heading color={colors.scandal} element='h3' fontSizeInPx={48}>
+				I&apos;m an h3!
+			</Heading>
+			<Heading color={colors.eastBay} element='h4' fontSizeInPx={40}>
+				I&apos;m an h4!
+			</Heading>
+			<Heading color={colors.scandal} element='h5' fontSizeInPx={32}>
+				I&apos;m an h5!
+			</Heading>
+			<Heading color={colors.eastBay} element='h6' fontSizeInPx={24}>
+				I&apos;m an h6!
 			</Heading>
 
 			<Gap />
@@ -148,6 +161,13 @@ const App = () => {
 
 			{/* single filtering */}
 			<FilterSingle />
+
+			<Gap />
+
+			{/* screen reader text */}
+			<p>
+				There&apos;s some accessible text here! --&gt; <ScreenReaderText>Told ya!</ScreenReaderText>
+			</p>
 		</div>
 	);
 };

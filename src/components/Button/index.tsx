@@ -2,11 +2,11 @@ import { ButtonMode, Children } from '../../types/types';
 import ButtonStyles from './styles';
 
 interface ButtonsProps {
-	mode: ButtonMode;
 	children: Children;
+	mode: ButtonMode;
 }
 
-const Button = ({ mode, children }: ButtonsProps) => (
+const Button = ({ children, mode }: ButtonsProps) => (
 	<ButtonStyles mode={mode}>{children}</ButtonStyles>
 );
 

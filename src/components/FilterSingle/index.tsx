@@ -55,9 +55,9 @@ const FilterSingle = () => {
 					<FilterButton
 						key={dept}
 						data-value={dept}
+						isActive={dept === activeFilter}
 						onClick={filterTeamMembers}
 						type='button'
-						isActive={dept === activeFilter}
 					>
 						{dept}
 					</FilterButton>

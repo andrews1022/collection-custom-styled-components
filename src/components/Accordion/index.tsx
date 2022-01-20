@@ -24,9 +24,9 @@ const Accordion = () => {
 					{mockAccordionData.map((data, index) => (
 						<AccordionItem
 							key={data.id}
+							activeIndex={activeIndex}
 							data={data}
 							index={index}
-							activeIndex={activeIndex}
 							toggleAccordionItem={toggleAccordionItem}
 						/>
 					))}

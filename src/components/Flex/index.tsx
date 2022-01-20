@@ -6,7 +6,6 @@ interface FlexProps {
 	alignItems?: AlignFlexItems;
 	justifyContent?: JustifyFlexItems;
 	stackOnMobile?: boolean;
-
 	children: Children;
 }
 

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-interface CopyProps {
+type CopyProps = {
 	color: string;
-}
+};
 
 const Copy = styled.p<CopyProps>`
 	color: ${({ color }) => color};

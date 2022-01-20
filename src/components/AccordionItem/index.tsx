@@ -1,20 +1,22 @@
+/* eslint-disable no-unused-vars */
+
 import React from 'react';
 
 // styled components
 import { AccordionItemWrapper, ToggleBar, ToggleButton, AccordionContent } from './styles';
 
 interface AccordionItemProps {
+	activeIndex: null;
 	data: {
-		id: string;
-		headingText: string;
 		contentText: string;
+		headingText: string;
+		id: string;
 	};
 	index: number;
-	activeIndex: null;
 	toggleAccordionItem: (index: any) => void;
 }
 
-const AccordionItem = ({ data, index, activeIndex, toggleAccordionItem }: AccordionItemProps) => (
+const AccordionItem = ({ activeIndex, data, index, toggleAccordionItem }: AccordionItemProps) => (
 	<AccordionItemWrapper>
 		<ToggleBar
 			isOpen={index === activeIndex}
