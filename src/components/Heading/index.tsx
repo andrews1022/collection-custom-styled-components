@@ -1,6 +1,8 @@
 // Dynamically render any heading element (h1-6), along with dynamic styles
 // This component is purely text, and can be re-used heavily throughout a project
 
+import React from 'react';
+
 // styles
 import { HeadingStylesProps, HeadingStyles } from './styles';
 

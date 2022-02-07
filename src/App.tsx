@@ -1,3 +1,5 @@
+import React from 'react';
+
 // components
 import Accordion from './components/Accordion';
 import Button from './components/Button';

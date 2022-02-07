@@ -1,5 +1,10 @@
-import { ButtonMode, Children } from '../../types/types';
+import React from 'react';
+
+// styles
 import ButtonStyles from './styles';
+
+// types
+import { ButtonMode, Children } from '../../types/types';
 
 interface ButtonsProps {
 	children: Children;
