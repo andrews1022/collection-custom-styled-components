@@ -2,11 +2,11 @@ import React from 'react';
 
 // components
 import Accordion from './components/Accordion';
-import Button from './components/Button';
-import Copy from './components/Copy';
+import { Button } from './components/Button';
+import { Copy } from './components/Copy';
 import Heading from './components/Heading';
 import ProgressRing from './components/ProgressRing';
-import ScreenReaderText from './components/ScreenReaderText';
+import { ScreenReaderText } from './components/ScreenReaderText';
 
 // grid
 import Grid from './components/Grid';
@@ -33,18 +33,23 @@ const App = () => {
 			<Heading color={colors.scandal} element='h1' fontSizeInPx={64}>
 				I&apos;m an h1!
 			</Heading>
+
 			<Heading color={colors.eastBay} element='h2' fontSizeInPx={56}>
 				I&apos;m an h2!
 			</Heading>
+
 			<Heading color={colors.scandal} element='h3' fontSizeInPx={48}>
 				I&apos;m an h3!
 			</Heading>
+
 			<Heading color={colors.eastBay} element='h4' fontSizeInPx={40}>
 				I&apos;m an h4!
 			</Heading>
+
 			<Heading color={colors.scandal} element='h5' fontSizeInPx={32}>
 				I&apos;m an h5!
 			</Heading>
+
 			<Heading color={colors.eastBay} element='h6' fontSizeInPx={24}>
 				I&apos;m an h6!
 			</Heading>
@@ -52,8 +57,13 @@ const App = () => {
 			<Gap />
 
 			{/* button */}
-			<Button mode='primary'>Click Me!</Button>
-			<Button mode='secondary'>Click Me!</Button>
+			<Button mode='primary' type='button'>
+				Click Me!
+			</Button>
+
+			<Button mode='secondary' type='button'>
+				Click Me!
+			</Button>
 
 			<Gap />
 

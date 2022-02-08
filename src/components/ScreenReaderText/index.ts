@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ScreenReaderText = styled.span`
+export const ScreenReaderText = styled.span`
 	&:not(:focus):not(:active) {
 		clip: rect(0 0 0 0);
 		clip-path: inset(50%);
@@ -11,5 +11,3 @@ const ScreenReaderText = styled.span`
 		width: 1px;
 	}
 `;
-
-export default ScreenReaderText;

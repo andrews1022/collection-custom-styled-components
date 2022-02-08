@@ -5,12 +5,11 @@ import FlexStyles from './styles';
 interface FlexProps {
 	alignItems?: AlignFlexItems;
 	justifyContent?: JustifyFlexItems;
-	stackOnMobile?: boolean;
 	children: Children;
 }
 
-const Flex = ({ children, alignItems, justifyContent, stackOnMobile }: FlexProps) => (
-	<FlexStyles alignItems={alignItems} justifyContent={justifyContent} stackOnMobile={stackOnMobile}>
+const Flex = ({ children, alignItems, justifyContent }: FlexProps) => (
+	<FlexStyles alignItems={alignItems} justifyContent={justifyContent}>
 		{children}
 	</FlexStyles>
 );

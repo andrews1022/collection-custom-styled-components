@@ -1,4 +1,4 @@
-const mockAccordionData = [
+const accordionData = [
 	{
 		id: 'item-01',
 		headingText: 'Lorem ipsum dolor sit amet',
@@ -31,4 +31,4 @@ const mockAccordionData = [
 	}
 ];
 
-export default mockAccordionData;
+export default accordionData;

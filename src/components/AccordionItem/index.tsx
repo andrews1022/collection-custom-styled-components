@@ -3,9 +3,9 @@
 import React from 'react';
 
 // styled components
-import { AccordionItemWrapper, ToggleBar, ToggleButton, AccordionContent } from './styles';
+import * as S from './styles';
 
-interface AccordionItemProps {
+type AccordionItemProps = {
 	activeIndex: null;
 	data: {
 		contentText: string;
@@ -14,26 +14,29 @@ interface AccordionItemProps {
 	};
 	index: number;
 	toggleAccordionItem: (index: any) => void;
-}
+};
 
 const AccordionItem = ({ activeIndex, data, index, toggleAccordionItem }: AccordionItemProps) => (
-	<AccordionItemWrapper>
-		<ToggleBar
+	<S.Wrapper>
+		<S.Bar
 			isOpen={index === activeIndex}
 			onClick={() => toggleAccordionItem(index)}
 			onKeyPress={() => toggleAccordionItem(index)}
 			role='presentation'
 		>
-			<ToggleButton onClick={() => toggleAccordionItem(index)} type='button'>
+			<S.Toggle onClick={() => toggleAccordionItem(index)} type='button'>
 				{index === activeIndex ? '-' : '+'}
-			</ToggleButton>
-			<h2>{data.headingText}</h2>
-		</ToggleBar>
+			</S.Toggle>
 
-		<AccordionContent isOpen={index === activeIndex}>
+			<h2>
+				{data.headingText} {index + 1}
+			</h2>
+		</S.Bar>
+
+		<S.Content isOpen={index === activeIndex}>
 			<p>{data.contentText}</p>
-		</AccordionContent>
-	</AccordionItemWrapper>
+		</S.Content>
+	</S.Wrapper>
 );
 
 export default AccordionItem;

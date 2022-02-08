@@ -13,10 +13,9 @@ const FlexStyles = styled.div<FlexStylesProps>`
 	${(props) => (props.alignItems ? `align-items: ${props.alignItems};` : '')}
 	${(props) => (props.justifyContent ? `justify-content: ${props.justifyContent};` : '')}
 
-  ${(props) =>
-		props.stackOnMobile
-			? `@media ${props.theme.mediaQueries.tabletPortrait} { flex-direction: column; }`
-			: ''}
+	@media ${({ theme }) => theme.mediaQueries.tabletPortrait} {
+		flex-direction: column;
+	}
 `;
 
 export default FlexStyles;

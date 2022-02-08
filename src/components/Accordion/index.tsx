@@ -5,10 +5,8 @@ import AccordionItem from '../AccordionItem';
 import Grid from '../Grid';
 import GridColumn from '../GridColumn';
 
-// styled-components
-
-// mock data
-import mockAccordionData from './data';
+// data
+import accordionData from './data';
 
 const Accordion = () => {
 	const [activeIndex, setActiveIndex] = useState(null);
@@ -21,7 +19,7 @@ const Accordion = () => {
 		<Grid>
 			<GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 6 } }}>
 				<ul className='accordion'>
-					{mockAccordionData.map((data, index) => (
+					{accordionData.map((data, index) => (
 						<AccordionItem
 							key={data.id}
 							activeIndex={activeIndex}

@@ -1,16 +1,16 @@
 import styled from 'styled-components';
 
-export interface IsOpened {
+type IsOpened = {
 	isOpen: boolean;
-}
+};
 
-export const AccordionItemWrapper = styled.li`
+export const Wrapper = styled.li`
 	&:not(:last-of-type) {
 		margin-bottom: 1.25rem;
 	}
 `;
 
-export const ToggleBar = styled.div<IsOpened>`
+export const Bar = styled.div<IsOpened>`
 	display: flex;
 	align-items: center;
 	background-color: ${({ theme }) => theme.greys.whiteSmoke};
@@ -20,7 +20,7 @@ export const ToggleBar = styled.div<IsOpened>`
 	transition: border-radius 300ms ease-in-out;
 `;
 
-export const ToggleButton = styled.button`
+export const Toggle = styled.button`
 	height: 2rem;
 	width: 2rem;
 	border: none;
@@ -33,7 +33,7 @@ export const ToggleButton = styled.button`
 	margin-right: 1rem;
 `;
 
-export const AccordionContent = styled.div<IsOpened>`
+export const Content = styled.div<IsOpened>`
 	border: 2px solid ${({ theme }) => theme.greys.whiteSmoke};
 	border-radius: 0 0 1rem 1rem;
 	line-height: 1.35;

@@ -1,11 +1,13 @@
+// NOTE: With this component, you will still need to add on the "type" prop and an appropiate value
+
 import styled from 'styled-components';
-import { ButtonMode } from '../../types/types';
 
-interface ButtonStylesProps {
-	mode: ButtonMode;
-}
+// an example of primary/secondary (solid, hollow)
+type ButtonsProps = {
+	mode: 'primary' | 'secondary';
+};
 
-const ButtonStyles = styled.button<ButtonStylesProps>`
+export const Button = styled.button<ButtonsProps>`
 	background-color: ${({ mode, theme }) =>
 		mode === 'primary' ? theme.colors.eastBay : 'transparent'};
 	border: 2px solid
@@ -21,5 +23,3 @@ const ButtonStyles = styled.button<ButtonStylesProps>`
 		box-shadow: 0 0.625rem 0.75rem 0 rgba(0, 0, 0, 0.1);
 	}
 `;
-
-export default ButtonStyles;
