@@ -1,12 +1,16 @@
 import styled from 'styled-components';
-import { AlignGridItems, Children } from '../../types/types';
 
-interface GridProps {
+// types
+import type { ReactNode } from 'react';
+import type { AlignGridItems } from '../../types/types';
+
+// props
+type GridProps = {
 	alignItems?: AlignGridItems;
-	children: Children;
-}
+	children: ReactNode;
+};
 
-const Grid = styled.div<GridProps>`
+export const Grid = styled.div<GridProps>`
 	display: grid;
 	align-items: ${({ alignItems }) => alignItems || 'center'};
 	grid-gap: 1.5rem;
@@ -17,5 +21,3 @@ const Grid = styled.div<GridProps>`
 		padding: 0 1.5rem;
 	}
 `;
-
-export default Grid;

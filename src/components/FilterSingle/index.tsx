@@ -1,29 +1,20 @@
 import React, { useState } from 'react';
+import type { MouseEvent } from 'react';
 
 // styled components
-import {
-	Card,
-	CardGrid,
-	FilterButton,
-	FilterRow,
-	FilterSingleWrapper,
-	Name,
-	PicturePlaceholder,
-	Position,
-	Tagline
-} from './styles';
+import * as S from './styles';
 
-// mock data
-import mockData from './data';
+// data
+import filterData from './data';
 
 const FilterSingle = () => {
-	const initialTeamMembers = mockData;
+	const initialTeamMembers = filterData;
 
 	// state
-	const [teamMembers, setTeamMembers] = useState(mockData);
+	const [teamMembers, setTeamMembers] = useState(filterData);
 	const [activeFilter, setActiveFilter] = useState<string | undefined>('');
 
-	const filterTeamMembers = (event: React.MouseEvent<HTMLButtonElement>) => {
+	const filterTeamMembers = (event: MouseEvent<HTMLButtonElement>) => {
 		const { value } = (event.currentTarget as HTMLButtonElement).dataset;
 
 		// if the user clicks the active filter, reset the filter
@@ -44,15 +35,15 @@ const FilterSingle = () => {
 	};
 
 	// get a dynamic, no-duplicates array of all roles from the team members
-	const departments = Array.from(new Set(mockData.map((data) => data.department.trim()))).sort();
+	const departments = Array.from(new Set(filterData.map((data) => data.department.trim()))).sort();
 
 	return (
-		<FilterSingleWrapper>
-			<Tagline>Filter these mock team members by department:</Tagline>
+		<S.Wrapper>
+			<S.Tagline>Filter these mock team members by department:</S.Tagline>
 
-			<FilterRow>
+			<S.FilterRow>
 				{departments.map((dept) => (
-					<FilterButton
+					<S.FilterButton
 						key={dept}
 						data-value={dept}
 						isActive={dept === activeFilter}
@@ -60,20 +51,20 @@ const FilterSingle = () => {
 						type='button'
 					>
 						{dept}
-					</FilterButton>
+					</S.FilterButton>
 				))}
-			</FilterRow>
+			</S.FilterRow>
 
-			<CardGrid>
+			<S.CardGrid>
 				{teamMembers.map((member) => (
-					<Card key={member.id}>
-						<PicturePlaceholder />
-						<Name>{member.name}</Name>
-						<Position>{member.position}</Position>
-					</Card>
+					<S.Card key={member.id}>
+						<S.PicturePlaceholder />
+						<S.Name>{member.name}</S.Name>
+						<S.Position>{member.position}</S.Position>
+					</S.Card>
 				))}
-			</CardGrid>
-		</FilterSingleWrapper>
+			</S.CardGrid>
+		</S.Wrapper>
 	);
 };
 

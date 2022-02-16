@@ -5,6 +5,7 @@ import React from 'react';
 // styled components
 import * as S from './styles';
 
+// props
 type AccordionItemProps = {
 	activeIndex: null;
 	data: {

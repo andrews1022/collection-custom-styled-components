@@ -1,14 +1,14 @@
 import React from 'react';
 
-// styles and styled components
-import { AnimatedCircle, BaseCircle, ProgressRingStyles, ProgressRingWrapper } from './styles';
+// styled components
+import * as S from './styles';
 
 // props
-interface ProgressRingProps {
+type ProgressRingProps = {
 	radius: number;
 	slideDuration: number;
 	stroke: number;
-}
+};
 
 const ProgressRing = ({ radius, slideDuration, stroke }: ProgressRingProps) => {
 	const normalizedRadius = radius - stroke * 2;
@@ -22,17 +22,17 @@ const ProgressRing = ({ radius, slideDuration, stroke }: ProgressRingProps) => {
 	const CX_CY_VALUE = '50%';
 
 	return (
-		<ProgressRingWrapper>
-			<ProgressRingStyles dimensions={progressRingDimensions} viewBox={VIEW_BOX_DIMENSIONS}>
-				<BaseCircle cx={CX_CY_VALUE} cy={CX_CY_VALUE} r={normalizedRadius / 2.5} />
-				<AnimatedCircle
+		<S.Wrapper>
+			<S.Ring dimensions={progressRingDimensions} viewBox={VIEW_BOX_DIMENSIONS}>
+				<S.BaseCircle cx={CX_CY_VALUE} cy={CX_CY_VALUE} r={normalizedRadius / 2.5} />
+				<S.AnimatedCircle
 					cx={CX_CY_VALUE}
 					cy={CX_CY_VALUE}
 					r={normalizedRadius / 2.5}
 					slideDuration={slideDuration}
 				/>
-			</ProgressRingStyles>
-		</ProgressRingWrapper>
+			</S.Ring>
+		</S.Wrapper>
 	);
 };
 

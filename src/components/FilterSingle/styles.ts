@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-// interfaces
-import { isActiveInt } from '../../types/interfaces';
+type isActiveType = {
+	isActive: boolean;
+};
 
-export const FilterSingleWrapper = styled.div`
+export const Wrapper = styled.div`
 	padding: 0 4.5rem;
 `;
 
@@ -16,7 +17,7 @@ export const FilterRow = styled.div`
 	margin: 1.5rem 0;
 `;
 
-export const FilterButton = styled.button<isActiveInt>`
+export const FilterButton = styled.button<isActiveType>`
 	background-color: ${({ isActive, theme }) =>
 		isActive ? theme.colors.eastBay : theme.shades.white};
 	border: 2px solid ${({ theme }) => theme.colors.eastBay};

@@ -7,7 +7,7 @@ type TeamMember = {
 	department: 'Executive' | 'Customer Care' | 'Design' | 'Development' | 'Sales';
 }[];
 
-const mockData: TeamMember = [
+const filterData: TeamMember = [
 	{
 		id: 'tm-01',
 		name: 'Sherry Welch',
@@ -58,4 +58,4 @@ const mockData: TeamMember = [
 	}
 ];
 
-export default mockData;
+export default filterData;

@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { AlignFlexItems, JustifyFlexItems } from '../../types/types';
+import type { AlignFlexItems, JustifyFlexItems } from '../../types/types';
 
-interface FlexStylesProps {
+type FlexProps = {
 	alignItems?: AlignFlexItems;
 	justifyContent?: JustifyFlexItems;
 	stackOnMobile?: boolean;
-}
+};
 
-const FlexStyles = styled.div<FlexStylesProps>`
+export const Flex = styled.div<FlexProps>`
 	display: flex;
 
 	${(props) => (props.alignItems ? `align-items: ${props.alignItems};` : '')}
@@ -17,5 +17,3 @@ const FlexStyles = styled.div<FlexStylesProps>`
 		flex-direction: column;
 	}
 `;
-
-export default FlexStyles;

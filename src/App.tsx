@@ -2,24 +2,24 @@ import React from 'react';
 
 // components
 import Accordion from './components/Accordion';
-import { Button } from './components/Button';
-import { Copy } from './components/Copy';
-import Heading from './components/Heading';
 import ProgressRing from './components/ProgressRing';
-import { ScreenReaderText } from './components/ScreenReaderText';
 
-// grid
-import Grid from './components/Grid';
-import GridColumn from './components/GridColumn';
+// styled components
+import { Button } from './components/UI/Button';
+import { Copy } from './components/UI/Copy';
+import { Flex } from './components/UI/Flex';
+import { Gap } from './components/UI/Gap';
+import { Grid } from './components/UI/Grid';
+import { GridColumn } from './components/UI/GridColumn';
+import { Heading } from './components/UI/Heading';
+import { ScreenReaderText } from './components/UI/ScreenReaderText';
 
 // flex
-import Flex from './components/Flex';
 
 // theme
 import theme from './styles/theme';
 
 // util
-import Gap from './utils/Gap';
 import FilterSingle from './components/FilterSingle';
 
 const App = () => {
@@ -30,27 +30,27 @@ const App = () => {
 			<Gap />
 
 			{/* headings */}
-			<Heading color={colors.scandal} element='h1' fontSizeInPx={64}>
+			<Heading as='h1' marginBottom={1.5} size={3.5}>
 				I&apos;m an h1!
 			</Heading>
 
-			<Heading color={colors.eastBay} element='h2' fontSizeInPx={56}>
+			<Heading as='h2' marginBottom={1.5} size={3}>
 				I&apos;m an h2!
 			</Heading>
 
-			<Heading color={colors.scandal} element='h3' fontSizeInPx={48}>
+			<Heading as='h3' marginBottom={1.5} size={2.5}>
 				I&apos;m an h3!
 			</Heading>
 
-			<Heading color={colors.eastBay} element='h4' fontSizeInPx={40}>
+			<Heading as='h4' marginBottom={1.5} size={2}>
 				I&apos;m an h4!
 			</Heading>
 
-			<Heading color={colors.scandal} element='h5' fontSizeInPx={32}>
+			<Heading as='h5' marginBottom={1.5} size={1.5}>
 				I&apos;m an h5!
 			</Heading>
 
-			<Heading color={colors.eastBay} element='h6' fontSizeInPx={24}>
+			<Heading as='h6' marginBottom={1.5} size={1}>
 				I&apos;m an h6!
 			</Heading>
 

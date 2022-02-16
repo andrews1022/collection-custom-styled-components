@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
-// interfaces
-interface ProgressRingStylesProps {
+// props
+type RingProps = {
 	dimensions: {
 		height: number;
 		width: number;
 	};
-}
+};
 
-interface AnimatedCircleProps {
+type AnimatedCircleProps = {
 	slideDuration: number;
-}
+};
 
-export const ProgressRingWrapper = styled.div`
+export const Wrapper = styled.div`
 	transition: opacity 150ms ease-in-out;
 `;
 
-export const ProgressRingStyles = styled.svg<ProgressRingStylesProps>`
+export const Ring = styled.svg<RingProps>`
 	position: relative;
 	height: ${({ dimensions }) => `${dimensions.height}rem`};
 	width: ${({ dimensions }) => `${dimensions.width}rem`};

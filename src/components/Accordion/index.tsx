@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 
 // components
 import AccordionItem from '../AccordionItem';
-import Grid from '../Grid';
-import GridColumn from '../GridColumn';
+
+// styled components
+import { Grid } from '../UI/Grid';
+import { GridColumn } from '../UI/GridColumn';
 
 // data
 import accordionData from './data';

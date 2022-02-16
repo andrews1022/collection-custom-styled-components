@@ -10,23 +10,23 @@ import styled from 'styled-components';
 
 // as well as an optional 'breakpoint' prop to specify when the columns should stack on mobile
 
-interface GridColumnPropsA {
+type GridColumnPropsA = {
 	isFullWidth: boolean;
-}
+};
 
-interface GridColumnPropsB {
+type GridColumnPropsB = {
 	columns: {
 		startingColumn: number;
 		numberOfColumnsToSpan: number;
 	};
-}
+};
 
-interface GridColumnProps {
+type GridColumnProps = {
 	breakpoint?: string;
 	layout: GridColumnPropsA | GridColumnPropsB;
-}
+};
 
-const GridColumn = styled.div<GridColumnProps>`
+export const GridColumn = styled.div<GridColumnProps>`
 	${({ layout }) =>
 		'isFullWidth' in layout
 			? 'grid-column: 1 / -1;'
@@ -36,5 +36,3 @@ const GridColumn = styled.div<GridColumnProps>`
 		grid-column: 1 / -1;
 	}
 `;
-
-export default GridColumn;
