@@ -11,29 +11,29 @@ import { GridColumn } from '../UI/GridColumn';
 import accordionData from './data';
 
 const Accordion = () => {
-	const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(null);
 
-	const toggleAccordionItem = (index: any) => {
-		setActiveIndex(activeIndex === index ? null : index);
-	};
+  const toggleAccordionItem = (index: any) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
-	return (
-		<Grid>
-			<GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 6 } }}>
-				<ul className='accordion'>
-					{accordionData.map((data, index) => (
-						<AccordionItem
-							key={data.id}
-							activeIndex={activeIndex}
-							data={data}
-							index={index}
-							toggleAccordionItem={toggleAccordionItem}
-						/>
-					))}
-				</ul>
-			</GridColumn>
-		</Grid>
-	);
+  return (
+    <Grid>
+      <GridColumn layout={{ columns: { startingColumn: 1, numberOfColumnsToSpan: 6 } }}>
+        <ul className='accordion'>
+          {accordionData.map((data, index) => (
+            <AccordionItem
+              key={data.id}
+              activeIndex={activeIndex}
+              data={data}
+              index={index}
+              toggleAccordionItem={toggleAccordionItem}
+            />
+          ))}
+        </ul>
+      </GridColumn>
+    </Grid>
+  );
 };
 
 export default Accordion;

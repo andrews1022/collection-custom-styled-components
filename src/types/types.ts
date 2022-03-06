@@ -7,12 +7,12 @@ export type Children = ReactNode;
 export type AlignFlexItems = 'baseline' | 'center' | 'flex-end' | 'flex-start' | 'stretch';
 
 export type JustifyFlexItems =
-	| 'center'
-	| 'flex-end'
-	| 'flex-start'
-	| 'space-around'
-	| 'space-between'
-	| 'space-evenly';
+  | 'center'
+  | 'flex-end'
+  | 'flex-start'
+  | 'space-around'
+  | 'space-between'
+  | 'space-evenly';
 
 // grid
 export type AlignGridItems = 'baseline' | 'center' | 'end' | 'start' | 'stretch';

@@ -11,28 +11,28 @@ import styled from 'styled-components';
 // as well as an optional 'breakpoint' prop to specify when the columns should stack on mobile
 
 type GridColumnPropsA = {
-	isFullWidth: boolean;
+  isFullWidth: boolean;
 };
 
 type GridColumnPropsB = {
-	columns: {
-		startingColumn: number;
-		numberOfColumnsToSpan: number;
-	};
+  columns: {
+    startingColumn: number;
+    numberOfColumnsToSpan: number;
+  };
 };
 
 type GridColumnProps = {
-	breakpoint?: string;
-	layout: GridColumnPropsA | GridColumnPropsB;
+  breakpoint?: string;
+  layout: GridColumnPropsA | GridColumnPropsB;
 };
 
 export const GridColumn = styled.div<GridColumnProps>`
-	${({ layout }) =>
-		'isFullWidth' in layout
-			? 'grid-column: 1 / -1;'
-			: `grid-column: ${layout.columns.startingColumn} / span ${layout.columns.numberOfColumnsToSpan};`}
+  ${({ layout }) =>
+    'isFullWidth' in layout
+      ? 'grid-column: 1 / -1;'
+      : `grid-column: ${layout.columns.startingColumn} / span ${layout.columns.numberOfColumnsToSpan};`}
 
-	@media ${({ breakpoint, theme }) => breakpoint || theme.mediaQueries.tabletMedium} {
-		grid-column: 1 / -1;
-	}
+  @media ${({ breakpoint, theme }) => breakpoint || theme.mediaQueries.tabletMedium} {
+    grid-column: 1 / -1;
+  }
 `;
